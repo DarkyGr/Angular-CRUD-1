@@ -6,9 +6,15 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 mt-4">
       <ul class="list-group">
-        
+        <li *ngFor="let employee of employeeArray"
+          class="list-group-item list-group-item-action">
+          <span class="badge bg-primary">
+            {{ employee.id }}
+          </span>
+          {{ employee.name }} - {{ employee.country }}
+        </li>
       </ul>
       <div class="card mt-4">
         <div class="card-body">
