@@ -16,5 +16,5 @@ export class AppComponent {
     {id: 3, name: "Carl", country: "MX"},
   ];
 
-  
+  selectedEmployee: Employee = new Employee();  
 }
