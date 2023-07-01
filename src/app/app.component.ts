@@ -33,4 +33,12 @@ export class AppComponent {
     
     this.selectedEmployee = new Employee();
   }
+
+  // Delete Button
+  Delete(){
+    if (confirm('Are you sure you want to delete this employee?')) {
+      this.employeeArray = this.employeeArray.filter(x => x != this.selectedEmployee);
+      this.selectedEmployee = new Employee();
+    }    
+  }
 }
