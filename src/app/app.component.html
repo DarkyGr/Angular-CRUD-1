@@ -21,15 +21,17 @@
           <div class="card-title">
             Insert a new Employee
           </div>
-          <div class="form-group">
+          <div class="form-group m-2">
             <input type="text" [(ngModel)]="selectedEmployee.name"  placeholder="Insert a name" class="form-control">
           </div>
-          <div class="form-group">
+          <div class="form-group m-2">
             <input type="text" [(ngModel)]="selectedEmployee.country"  placeholder="Insert a country" class="form-control">
           </div>
+          <button (click)="AddOrEdit()" class="btn btn-primary m-2">
+            Submit
+          </button>
         </div>
-      </div>
-      
+      </div>      
     </div>
 
     <div class="col-md-4">

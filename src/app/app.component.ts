@@ -16,5 +16,14 @@ export class AppComponent {
     {id: 3, name: "Carl", country: "MX"},
   ];
 
-  selectedEmployee: Employee = new Employee();  
+  // New Employee
+  selectedEmployee: Employee = new Employee();
+
+  // Button
+  AddOrEdit(){
+    this.selectedEmployee.id = this.employeeArray.length + 1;
+    this,this.employeeArray.push(this.selectedEmployee);
+
+    this.selectedEmployee = new Employee();
+  }
 }
