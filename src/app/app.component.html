@@ -9,7 +9,10 @@
     <div class="col-md-8 mt-4">
       <ul class="list-group">
         <li *ngFor="let employee of employeeArray"
-          class="list-group-item list-group-item-action">
+          class="list-group-item list-group-item-action"
+          (click)="OpenForEdit(employee)"
+          [class.active]="employee == selectedEmployee"
+          >
           <span class="badge bg-primary">
             {{ employee.id }}
           </span>

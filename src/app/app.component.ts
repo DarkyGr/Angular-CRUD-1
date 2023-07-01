@@ -19,11 +19,18 @@ export class AppComponent {
   // New Employee
   selectedEmployee: Employee = new Employee();
 
-  // Button
-  AddOrEdit(){
-    this.selectedEmployee.id = this.employeeArray.length + 1;
-    this,this.employeeArray.push(this.selectedEmployee);
+  // Open for edit
+  OpenForEdit(employee: Employee){
+    this.selectedEmployee = employee;
+  }
 
+  // Add Button
+  AddOrEdit(){
+    if (this.selectedEmployee.id === 0) {
+      this.selectedEmployee.id = this.employeeArray.length + 1;
+      this.employeeArray.push(this.selectedEmployee);      
+    }
+    
     this.selectedEmployee = new Employee();
   }
 }
